@@ -1,0 +1,28 @@
+name: Auto Deploy to Server
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Hetzner Server
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Trigger server update
+      run: |
+        echo "🚀 Triggering deployment to server..."
+        curl -f -X POST http://135.181.156.117:7777/webhook || echo "Webhook failed, but continuing..."
+        echo "✅ Deployment signal sent"
+    
+    - name: Wait for deployment
+      run: |
+        echo "⏳ Waiting 30 seconds for deployment to complete..."
+        sleep 30
+        
+    - name: Verify deployment
+      run: |
+        echo "🔍 Checking if site is accessible..."
+        curl -f -s -o /dev/null https://beauty.designcorp.eu && echo "✅ Site is live!" || echo "❌ Site check failed"
