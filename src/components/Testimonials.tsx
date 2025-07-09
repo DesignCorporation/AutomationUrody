@@ -84,6 +84,11 @@ const Testimonials = () => {
               <p className="text-gray-700 leading-relaxed italic">
                 "{testimonial.text}"
               </p>
+              <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-3 rounded-lg text-sm">
+                {index === 0 && "💰 Oszczędność: 1800 zł/miesiąc"}
+                {index === 1 && "📈 Wzrost klientów: +40%"}
+                {index === 2 && "⏰ Czas zwrotu: 1 tydzień"}
+              </div>
             </div>
           ))}
         </div>

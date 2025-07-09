@@ -67,12 +67,33 @@ const Results = () => {
         </div>
 
         <div className="mt-16 bg-gradient-to-r from-pink-500 to-orange-400 rounded-2xl p-8 text-center text-white">
-          <h3 className="text-2xl font-bold mb-4">
-            {t('results.roi.title')}
-          </h3>
-          <p className="text-lg opacity-90 mb-6">
-            {t('results.roi.description')}
-          </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">
+                {t('results.roi.title')}
+              </h3>
+              <p className="text-lg opacity-90 mb-6">
+                {t('results.roi.description')}
+              </p>
+            </div>
+            <div className="bg-white/20 p-6 rounded-xl">
+              <h4 className="text-xl font-bold mb-4">📊 Przykładowy salon:</h4>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div className="font-semibold">Przed:</div>
+                  <div>• 3h/dzień na telefony</div>
+                  <div>• 30% no-show</div>
+                  <div>• Stres i chaos</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Po:</div>
+                  <div>• 15 min/dzień</div>
+                  <div>• 5% no-show</div>
+                  <div>• +500€ zysku/miesiąc</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <button 
             onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"

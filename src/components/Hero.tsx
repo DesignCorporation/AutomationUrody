@@ -20,9 +20,6 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 {t('hero.title')}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">
-                  {' '}
-                </span>
               </h1>
               <div className="flex items-center space-x-2 text-2xl lg:text-3xl font-semibold text-gray-700">
                 <Clock className="w-8 h-8 text-pink-500" />
@@ -49,6 +46,14 @@ const Hero = () => {
               </button>
             </div>
 
+            <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 rounded-xl">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                <span className="font-semibold">
+                  Oferta wprowadzająca: €400 zamiast €800 - tylko pierwsze 50 salonów!
+                </span>
+              </div>
+            </div>
             <div className="flex items-center space-x-6 pt-6">
               <span className="text-gray-600">{t('hero.integrates')}</span>
               <div className="flex space-x-4">
@@ -95,6 +100,11 @@ const Hero = () => {
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       <span className="text-sm text-blue-600">Przypomnienie wysłane</span>
                     </div>
+                  </div>
+                  <div className="bg-gradient-to-r from-pink-500 to-orange-400 p-3 rounded-lg text-white text-center">
+                    <p className="text-sm font-semibold">
+                      💰 Oszczędność dzisiaj: 2.5h = 75 zł
+                    </p>
                   </div>
                 </div>
               </div>

@@ -38,7 +38,7 @@ const Pricing = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-pink-500 to-orange-400 rounded-2xl p-8 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-pink-500 to-orange-400 rounded-2xl p-8 text-white relative overflow-hidden mb-8">
             <div className="absolute top-4 right-4 bg-white text-pink-500 px-4 py-2 rounded-full text-sm font-bold">
               {t('pricing.special')}
             </div>
@@ -105,6 +105,49 @@ const Pricing = () => {
             </div>
           </div>
 
+          {/* Competitor comparison */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              💰 Porównanie z konkurencją
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <h4 className="font-bold text-gray-800 mb-4">Konkurencja</h4>
+                <div className="text-3xl font-bold text-red-500 mb-2">€2000+</div>
+                <div className="text-sm text-gray-600 mb-4">+ €100/miesiąc</div>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>❌ Długoterminowe zobowiązania</li>
+                  <li>❌ Ukryte koszty</li>
+                  <li>❌ Skomplikowana instalacja</li>
+                  <li>❌ Płatne wsparcie</li>
+                </ul>
+              </div>
+              
+              <div className="text-center p-6 bg-gradient-to-r from-pink-500 to-orange-400 text-white rounded-xl transform scale-105">
+                <h4 className="font-bold mb-4">Beauty Automation</h4>
+                <div className="text-3xl font-bold mb-2">€400</div>
+                <div className="text-sm opacity-90 mb-4">+ €50/miesiąc</div>
+                <ul className="text-sm space-y-2">
+                  <li>✅ Bez zobowiązań</li>
+                  <li>✅ Przejrzysta cena</li>
+                  <li>✅ Instalacja w 24h</li>
+                  <li>✅ Bezpłatne wsparcie</li>
+                </ul>
+              </div>
+              
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <h4 className="font-bold text-gray-800 mb-4">Bez automatyzacji</h4>
+                <div className="text-3xl font-bold text-red-500 mb-2">€0</div>
+                <div className="text-sm text-gray-600 mb-4">ale tracisz 1800 zł/miesiąc</div>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>❌ 15h tygodniowo na telefony</li>
+                  <li>❌ 30% no-show</li>
+                  <li>❌ Chaos w terminarzach</li>
+                  <li>❌ Stres i przepracowanie</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div className="mt-8 grid md:grid-cols-3 gap-6 text-center">
             <div className="bg-gray-50 p-6 rounded-xl">
               <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-3" />

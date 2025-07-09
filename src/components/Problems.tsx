@@ -41,6 +41,11 @@ const Problems = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('problems.description')}
           </p>
+          <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-4 max-w-2xl mx-auto">
+            <p className="text-red-700 font-semibold">
+              ⚠️ Średni salon traci 1800 zł miesięcznie na nieefektywnych procesach
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -51,21 +56,41 @@ const Problems = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">{problem.title}</h3>
               <p className="text-gray-600 leading-relaxed">{problem.description}</p>
+              <div className="mt-4 text-red-600 font-semibold text-sm">
+                {index === 0 && "💸 Koszt: 450 zł/miesiąc"}
+                {index === 1 && "💸 Koszt: 600 zł/miesiąc"}
+                {index === 2 && "💸 Koszt: 500 zł/miesiąc"}
+                {index === 3 && "💸 Koszt: 250 zł/miesiąc"}
+              </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-white p-8 rounded-2xl shadow-lg inline-block">
+          <div className="bg-gradient-to-r from-pink-500 to-orange-400 p-8 rounded-2xl shadow-lg text-white max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              {t('problems.recognize')}
+              <span className="text-white">{t('problems.recognize')}</span>
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl">
+            <p className="text-white opacity-90 mb-6 max-w-2xl mx-auto text-lg">
               {t('problems.solution')}
             </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-6 text-sm">
+              <div className="bg-white/20 p-4 rounded-lg">
+                <div className="text-2xl font-bold">15h</div>
+                <div>oszczędności tygodniowo</div>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <div className="text-2xl font-bold">70%</div>
+                <div>mniej no-show</div>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <div className="text-2xl font-bold">€400</div>
+                <div>jednorazowy koszt</div>
+              </div>
+            </div>
             <button 
               onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105"
+              className="bg-white text-pink-500 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 text-lg"
             >
               {t('problems.see_solution')}
             </button>
